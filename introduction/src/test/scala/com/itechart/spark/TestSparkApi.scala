@@ -9,8 +9,8 @@ object TestSparkApi {
       .builder()
       .master("local")
       .appName("Simple Test Application")
-      .config("spark.eventLog.enabled", "true")
-      .config("spark.eventLog.dir", "./tmp/logs")
+      //.config("spark.eventLog.enabled", "true")
+      //.config("spark.eventLog.dir", "../tmp/logs")
       .getOrCreate()
   }
 
