@@ -8,7 +8,7 @@ object TestSparkApi {
     new SparkContext(
       new SparkConf()
         .setAppName("Simple Application")
-        .setMaster("local")
+        .setMaster("local[2]")
       //.set("spark.eventLog.enabled", "true")
       //.set("spark.eventLog.dir", "../tmp/logs")
     )
