@@ -5,7 +5,7 @@ import org.scalatest.FunSpec
 
 class ParallelizedCollectionAppSpec extends FunSpec {
 
-  describe("Range RDD App Tests") {
+  describe("Parallelized Collection App Tests") {
 
     it("test run") {
 
