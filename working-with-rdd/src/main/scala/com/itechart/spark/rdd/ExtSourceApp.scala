@@ -2,7 +2,7 @@ package com.itechart.spark.rdd
 
 import org.apache.spark.{SparkConf, SparkContext}
 
-object ExternalSourceApp {
+object ExtSourceApp {
 
   def main(args: Array[String]): Unit = {
     val spark = new SparkContext(
@@ -14,8 +14,6 @@ object ExternalSourceApp {
 
     spark.stop()
   }
-
-  case class Person(name: String, surname: String)
 
   def mainTestable(spark: SparkContext): Unit = {
     val hamlet = spark.textFile("src/main/resources/data/hamlet")
