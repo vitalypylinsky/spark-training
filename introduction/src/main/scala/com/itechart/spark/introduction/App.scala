@@ -1,7 +1,7 @@
 package com.itechart.spark.introduction
 
 import org.apache.log4j.Logger
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.{SparkConf, SparkContext}
 
 object App {
 
@@ -16,17 +16,19 @@ object App {
   }
 
   def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder
-      .appName("Simple Application")
-      .getOrCreate()
+
+    val spark = new SparkContext(
+      new SparkConf()
+        .setAppName("Simple Application")
+    )
 
     mainTestable(spark, parseCommandLineArgs(args))
 
     spark.stop()
   }
 
-  def mainTestable(spark: SparkSession, file: String): Unit = {
-    val data = spark.read.textFile(file).cache()
+  def mainTestable(spark: SparkContext, file: String): Unit = {
+    val data = spark.textFile(file).cache()
 
     val numAs = data.filter(line => line.contains("a")).count()
     val numBs = data.filter(line => line.contains("b")).count()

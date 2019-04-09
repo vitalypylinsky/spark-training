@@ -1,17 +1,17 @@
 package com.itechart.spark
 
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.{SparkConf, SparkContext}
 
 object TestSparkApi {
 
-  lazy val spark: SparkSession = {
-    SparkSession
-      .builder()
-      .master("local")
-      .appName("Simple Test Application")
-      //.config("spark.eventLog.enabled", "true")
-      //.config("spark.eventLog.dir", "../tmp/logs")
-      .getOrCreate()
+  lazy val spark: SparkContext = {
+    new SparkContext(
+      new SparkConf()
+        .setMaster("local")
+        .setAppName("Simple Test Application")
+      //.set("spark.eventLog.enabled", "true")
+      //.set("spark.eventLog.dir", "../tmp/logs")
+    )
   }
 
 }
