@@ -7,7 +7,7 @@ object PairRddApp {
   def main(args: Array[String]): Unit = {
     val spark = new SparkContext(
       new SparkConf()
-        .setAppName("Simple Application")
+        .setAppName("Pair RDD Application")
     )
 
     mainTestable(spark)

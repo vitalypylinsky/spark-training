@@ -7,7 +7,7 @@ object ExtSourceApp {
   def main(args: Array[String]): Unit = {
     val spark = new SparkContext(
       new SparkConf()
-        .setAppName("Simple Application")
+        .setAppName("External Source Application")
     )
 
     mainTestable(spark)

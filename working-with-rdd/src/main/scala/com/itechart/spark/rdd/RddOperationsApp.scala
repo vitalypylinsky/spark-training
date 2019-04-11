@@ -7,7 +7,7 @@ object RddOperationsApp {
   def main(args: Array[String]): Unit = {
     val spark = new SparkContext(
       new SparkConf()
-        .setAppName("Simple Application")
+        .setAppName("RDD Operations Application")
     )
 
     mainTestable(spark)
