@@ -32,8 +32,6 @@ object WordsCountApp {
     val fs = FileSystem.get(URI.create(location), new Configuration())
     fs.delete(new Path(location), true)
     words.saveAsTextFile(location)
-
-    println(words.count())
   }
 
 }
