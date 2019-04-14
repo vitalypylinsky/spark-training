@@ -21,9 +21,9 @@ object WordsCountApp {
 
   def mainTestable(spark: SparkContext): Unit = {
     val words = spark.textFile("src/main/resources/data/lines.txt")
-      .flatMap(line => line.split(" "))
-      .map(word => (word, 1))
-      .reduceByKey(_ + _)
+      .flatMap(line => line.split(" "))  // separate text into words
+      .map(word => (word, 1))                   // pair each word with 1
+      .reduceByKey(_ + _)                       // sum up the 1s in the pairs
 
     println(words.toDebugString)
 
