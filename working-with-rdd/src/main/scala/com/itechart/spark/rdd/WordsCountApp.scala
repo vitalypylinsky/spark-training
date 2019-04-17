@@ -25,8 +25,6 @@ object WordsCountApp {
       .map(word => (word, 1))                   // pair each word with 1
       .reduceByKey(_ + _)                       // sum up the 1s in the pairs
 
-    println(words.toDebugString)
-
     // RDD does not give us the opportunity to overwrite
     val location = "output"
     val fs = FileSystem.get(URI.create(location), new Configuration())
