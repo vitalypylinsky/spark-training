@@ -1,4 +1,4 @@
-package com.itechart.spark.rdd
+package com.itechart.spark.internals
 
 import org.apache.spark.{SparkConf, SparkContext}
 

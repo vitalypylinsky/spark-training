@@ -1,4 +1,4 @@
-package com.itechart.spark.rdd
+package com.itechart.spark.internals
 
 import com.itechart.spark.TestSparkApi.spark
 import org.scalatest.FunSpec

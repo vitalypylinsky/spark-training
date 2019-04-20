@@ -18,6 +18,7 @@
   <modules>
     <module>introduction</module>
     <module>working-with-rdd</module>
+    <module>internals-and-cluster</module>
   </modules>
 
 </project>
