@@ -74,10 +74,12 @@
           <junitxml>.</junitxml>
           <filereports>WDF TestSuite.txt</filereports>
           <argLine>-da -Xmx3g -XX:MaxPermSize=1g -XX:ReservedCodeCacheSize=512m</argLine>
+          <stdout>T</stdout>
         </configuration>
         <executions>
           <execution>
             <id>test</id>
+            <phase>test</phase>
             <goals>
               <goal>test</goal>
             </goals>
