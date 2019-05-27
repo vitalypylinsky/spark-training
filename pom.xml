@@ -19,6 +19,7 @@
     <module>introduction</module>
     <module>working-with-rdd</module>
     <module>internals-and-cluster</module>
+    <module>spark-sql-overview</module>
   </modules>
 
 </project>

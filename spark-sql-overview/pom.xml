@@ -9,13 +9,12 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>internals-and-cluster</artifactId>
+  <artifactId>spark-sql-overview</artifactId>
 
   <properties>
     <spark.version>2.4.0</spark.version>
     <scala.compat.version>2.11</scala.compat.version>
     <scalatest.version>3.0.5</scalatest.version>
-    <scopt.version>3.7.0</scopt.version>
 
     <!-- Plugin configuration -->
     <maven.scala.plugin.version>3.3.2</maven.scala.plugin.version>
@@ -28,15 +27,17 @@
     <!-- Spark dependency -->
     <dependency>
       <groupId>org.apache.spark</groupId>
-      <artifactId>spark-core_${scala.compat.version}</artifactId>
+      <artifactId>spark-sql_${scala.compat.version}</artifactId>
       <version>${spark.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.github.scopt</groupId>
-      <artifactId>scopt_${scala.compat.version}</artifactId>
-      <version>${scopt.version}</version>
+      <groupId>org.apache.spark</groupId>
+      <artifactId>spark-hive_${scala.compat.version}</artifactId>
+      <version>${spark.version}</version>
+      <scope>provided</scope>
     </dependency>
+
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${scala.compat.version}</artifactId>
